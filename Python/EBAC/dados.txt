@@ -1,0 +1,58 @@
+1. Projeto de Otimização de Colheitas
+Descrição:
+Projeto focado na otimização de colheitas, analisando períodos de chuvas e incidência solar, com a comparação de diversos tipos de plantas para determinar as melhores épocas de plantio e colheita. Inclui a verificação diária do histórico climático e das condições climáticas atuais para aprimorar a precisão das previsões agrícolas.
+
+Fonte: https://agrymet.com.br/, onde trabalhei como desenvolvedor front-end em 2022.
+
+2. Projeto de Indicadores da Bolsa de Valores
+Descrição:
+Projeto voltado à análise de tendências diárias e mensais de diversos ativos da bolsa de valores. O objetivo é auxiliar na tomada de decisões para a compra ou venda de ações, fornecendo indicadores claros e atualizados para investidores.
+
+
+1. Portal Brasileiro de Dados Abertos: 
+
+URL: https://dados.gov.br/
+
+2. IBGE: 
+
+URL: https://www.ibge.gov.br/
+
+3. IPEA: 
+
+URL: http://www.ipea.gov.br/portal/
+
+4. Datasus: 
+
+URL: http://www2.datasus.gov.br/DATASUS/index.php
+
+Internacionais:
+
+1. World Bank Open Data: 
+
+URL: https://data.worldbank.org/
+
+2. UNdata: 
+
+URL: http://data.un.org/
+
+3. European Union Open Data Portal: 
+
+URL: https://data.europa.eu/euodp/en/home
+
+4. U.S. Government’s Open Data: 
+
+URL: https://www.data.gov/
+
+5. Google Dataset Search: 
+
+URL: https://datasetsearch.research.google.com/
+
+6. Kaggle Datasets: 
+
+URL: https://www.kaggle.com/datasets
+
+7. UCI Machine Learning Repository: 
+
+URL: https://archive.ics.uci.edu/ml/index.php
+
+Espero que isso ajude! Um grande abraço.
