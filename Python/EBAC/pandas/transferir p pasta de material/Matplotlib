@@ -1,0 +1,116 @@
+### **Tutorial Básico de Matplotlib**
+
+#### **1. Introdução ao Matplotlib**
+O Matplotlib é uma biblioteca de visualização de dados em Python, amplamente usada para criar gráficos estáticos, animados e interativos. Ele oferece suporte para uma grande variedade de gráficos, como gráficos de linha, dispersão, barras, histogramas, entre outros.
+
+#### **2. Instalação**
+Se você ainda não tem o Matplotlib instalado, pode instalá-lo usando o seguinte comando:
+```bash
+pip install matplotlib
+```
+
+#### **3. Importando o Matplotlib**
+Antes de começar a criar gráficos, precisamos importar a biblioteca. A convenção comum é importar como `plt`:
+```python
+import matplotlib.pyplot as plt
+```
+
+#### **4. Criando um Gráfico de Linha Simples**
+Vamos começar com um exemplo simples de gráfico de linha:
+```python
+import matplotlib.pyplot as plt
+
+# Dados de exemplo
+x = [1, 2, 3, 4, 5]
+y = [2, 3, 5, 7, 11]
+
+# Criando o gráfico de linha
+plt.plot(x, y)
+
+# Adicionando título e rótulos
+plt.title("Gráfico de Linha Exemplo")
+plt.xlabel("Eixo X")
+plt.ylabel("Eixo Y")
+
+# Exibindo o gráfico
+plt.show()
+```
+
+#### **5. Personalizando o Gráfico**
+O Matplotlib permite personalizar os gráficos de várias maneiras, como mudar as cores, estilos de linha, e adicionar legendas.
+```python
+# Usando estilos de linha e cores diferentes
+plt.plot(x, y, color='red', linestyle='--', marker='o')
+
+# Adicionando uma grade
+plt.grid(True)
+
+plt.show()
+```
+
+#### **6. Criando Gráficos de Barras**
+Gráficos de barras são úteis para comparar categorias ou grupos.
+```python
+# Dados de exemplo
+categorias = ['A', 'B', 'C', 'D']
+valores = [5, 7, 3, 8]
+
+# Criando o gráfico de barras
+plt.bar(categorias, valores, color='blue')
+
+plt.title("Gráfico de Barras Exemplo")
+plt.xlabel("Categorias")
+plt.ylabel("Valores")
+
+plt.show()
+```
+
+#### **7. Criando Gráficos de Dispersão**
+Gráficos de dispersão são ótimos para mostrar a relação entre duas variáveis.
+```python
+import numpy as np
+
+# Dados de exemplo
+x = np.random.randn(100)
+y = np.random.randn(100)
+
+# Criando o gráfico de dispersão
+plt.scatter(x, y, color='green')
+
+plt.title("Gráfico de Dispersão Exemplo")
+plt.xlabel("Eixo X")
+plt.ylabel("Eixo Y")
+
+plt.show()
+```
+
+#### **8. Subplots (Vários Gráficos em uma Única Janela)**
+Podemos criar vários gráficos em uma única janela usando subplots.
+```python
+# Criando uma figura com 2 subplots (1 linha, 2 colunas)
+fig, axs = plt.subplots(1, 2, figsize=(10, 4))
+
+# Gráfico de linha no primeiro subplot
+axs[0].plot(x, y, color='blue')
+axs[0].set_title("Gráfico de Linha")
+
+# Gráfico de barras no segundo subplot
+axs[1].bar(categorias, valores, color='orange')
+axs[1].set_title("Gráfico de Barras")
+
+plt.show()
+```
+
+#### **9. Salvando Gráficos**
+Você pode salvar seus gráficos diretamente em arquivos, como PNG ou PDF.
+```python
+plt.plot(x, y)
+plt.title("Gráfico para Salvar")
+plt.savefig("grafico.png")  # Salva o gráfico como um arquivo PNG
+plt.show()
+```
+
+#### **10. Conclusão**
+Este tutorial cobre os conceitos básicos para começar a usar o Matplotlib. Com essas ferramentas, você pode criar uma ampla variedade de gráficos e personalizá-los para atender às suas necessidades. Para explorar mais, você pode consultar a [documentação oficial do Matplotlib](https://matplotlib.org/stable/contents.html).
+
+Se precisar de mais detalhes sobre algum tópico específico ou tiver outras perguntas, estou à disposição!

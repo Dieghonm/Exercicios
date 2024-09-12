@@ -1,0 +1,165 @@
+### 1. **Importar e visualizar dados**
+```python
+import pandas as pd
+
+# Ler um arquivo CSV
+df = pd.read_csv('arquivo.csv')
+
+# Exibir as primeiras linhas do DataFrame
+print(df.head())
+
+# Exibir as últimas linhas do DataFrame
+print(df.tail())
+
+# Exibir informações sobre o DataFrame (colunas, tipos de dados, valores não nulos)
+print(df.info())
+
+# Exibir estatísticas descritivas das colunas numéricas
+print(df.describe())
+```
+
+### 2. **Manipulação de colunas**
+```python
+# Renomear colunas
+df.rename(columns={'ColunaAntiga': 'ColunaNova'}, inplace=True)
+
+# Selecionar uma ou mais colunas
+df['coluna']  # Uma coluna
+df[['coluna1', 'coluna2']]  # Múltiplas colunas
+
+# Criar uma nova coluna
+df['nova_coluna'] = df['coluna1'] + df['coluna2']
+
+# Remover colunas
+df.drop(columns=['coluna'], inplace=True)
+```
+
+### 3. **Filtrar e selecionar dados**
+```python
+# Filtrar linhas com base em uma condição
+df_filtrado = df[df['coluna'] > 10]
+
+# Filtrar por múltiplas condições
+df_filtrado = df[(df['coluna1'] > 10) & (df['coluna2'] == 'valor')]
+
+# Selecionar linhas pelo índice
+df.iloc[0]  # Primeira linha
+df.iloc[10:20]  # Linhas do índice 10 ao 19
+```
+
+### 4. **Operações de agregação e estatísticas**
+```python
+# Agrupar por uma coluna e calcular a média
+df.groupby('coluna')['coluna2'].mean()
+
+# Contar valores únicos em uma coluna
+df['coluna'].value_counts()
+
+# Calcular a soma, média, máximo e mínimo
+df['coluna'].sum()
+df['coluna'].mean()
+df['coluna'].max()
+df['coluna'].min()
+```
+
+### 5. **Trabalhando com dados faltantes**
+```python
+# Verificar dados faltantes
+df.isnull().sum()
+
+# Preencher valores faltantes com um valor específico
+df['coluna'].fillna(0, inplace=True)
+
+# Remover linhas com valores faltantes
+df.dropna(inplace=True)
+```
+
+### 6. **Operações com DataFrames**
+```python
+# Mesclar (merge) dois DataFrames
+df_merge = pd.merge(df1, df2, on='coluna_comum')
+
+# Concatenar dois DataFrames
+df_concat = pd.concat([df1, df2], axis=0)  # Concatenar linhas
+df_concat = pd.concat([df1, df2], axis=1)  # Concatenar colunas
+```
+
+### 7. **Ordenar e reorganizar dados**
+```python
+# Ordenar por uma coluna
+df.sort_values(by='coluna', ascending=False, inplace=True)
+
+# Redefinir o índice
+df.reset_index(drop=True, inplace=True)
+```
+
+### 8. **Exportar dados**
+```python
+# Exportar para um arquivo CSV
+df.to_csv('arquivo_saida.csv', index=False)
+```
+
+#### 9. **Obter valores únicos de uma coluna**
+```python
+# Valores únicos de uma coluna
+df['coluna'].unique()
+```
+
+#### 10. **Contar a frequência de valores em uma coluna**
+```python
+# Contagem de frequência dos valores em uma coluna
+df['coluna'].value_counts()
+```
+
+#### 11. **Aplicar funções personalizadas a colunas**
+```python
+# Aplicar uma função a uma coluna
+df['nova_coluna'] = df['coluna'].apply(lambda x: x * 2)
+```
+
+#### 12. **Trabalhar com datas**
+```python
+# Converter uma coluna para o formato de data
+df['data'] = pd.to_datetime(df['data'])
+
+# Extrair ano, mês e dia de uma coluna de data
+df['ano'] = df['data'].dt.year
+df['mes'] = df['data'].dt.month
+df['dia'] = df['data'].dt.day
+```
+
+#### 13. **Remover duplicatas**
+```python
+# Remover linhas duplicadas
+df.drop_duplicates(inplace=True)
+```
+
+#### 14. **Ordenar os valores de uma coluna**
+```python
+# Ordenar os valores em uma coluna
+df.sort_values(by='coluna', ascending=True, inplace=True)
+```
+
+#### 15. **Pivotar um DataFrame**
+```python
+# Criar uma tabela dinâmica (pivot table)
+df_pivot = df.pivot_table(values='coluna_valor', index='coluna_linha', columns='coluna_coluna', aggfunc='sum')
+```
+
+#### 16. **Criar variáveis dummy (one-hot encoding)**
+```python
+# Converter uma coluna categórica em variáveis dummy
+df_dummies = pd.get_dummies(df['coluna_categorica'])
+```
+
+#### 17. **Verificar tipos de dados**
+```python
+# Verificar os tipos de dados das colunas
+df.dtypes
+```
+
+#### 18. **Alterar o tipo de dado de uma coluna**
+```python
+# Alterar o tipo de dado de uma coluna
+df['coluna'] = df['coluna'].astype('int')
+```
